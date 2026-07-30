@@ -749,6 +749,84 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================================
+   SPECIALTIES SECTION
+   ============================================================ */
+.specialties {
+  padding: var(--section-py) 0;
+  background: var(--clr-offwhite);
+}
+
+.specialties__layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.specialties__text {
+  font-size: 1.05rem;
+  color: var(--clr-text-light);
+  line-height: 1.85;
+  margin-top: 1rem;
+}
+
+.specialties__text strong {
+  color: var(--clr-primary);
+  font-weight: 600;
+}
+
+.specialties__media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.specialties__media-item {
+  margin: 0;
+}
+
+.specialties__media-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--clr-gray-200);
+}
+
+.specialties__media-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.specialties__media-item:hover .specialties__media-image img {
+  transform: scale(1.04);
+}
+
+.specialties__media-caption {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--clr-primary);
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ============================================================
+   ADVANTAGES SECTION (standalone)
+   ============================================================ */
+.advantages {
+  padding: var(--section-py) 0;
+  background: var(--clr-white);
+}
+
+.advantages .about__advantages {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+/* ============================================================
    SERVICES SECTION
    ============================================================ */
 .services {
@@ -1335,6 +1413,11 @@ select.form-control {
     gap: 40px;
   }
 
+  .specialties__layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
   .jobs__grid {
     grid-template-columns: 1fr;
   }
@@ -1359,7 +1442,8 @@ select.form-control {
   }
 
   .services__grid,
-  .advantages-grid {
+  .advantages-grid,
+  .specialties__media-grid {
     grid-template-columns: 1fr;
   }
 
