@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
   statNumbers.forEach(el => statObserver.observe(el));
 
   /* ============================================================
-     SMOOTH SCROLL FOR ANCHOR LINKS
+     SMOOTH SCROLL FOR ANCHOR LINKS (same page only)
      ============================================================ */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -176,6 +176,14 @@ document.addEventListener('DOMContentLoaded', () => {
           behavior: 'smooth'
         });
       }
+    });
+  });
+
+  // Handle cross-page anchor links (e.g. index.html#ueber-uns)
+  document.querySelectorAll('a[href*=".html#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      // Let the browser handle navigation naturally
+      // The target page will scroll to the anchor on load
     });
   });
 

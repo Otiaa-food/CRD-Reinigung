@@ -1306,6 +1306,138 @@ select.form-control {
 }
 
 /* ============================================================
+   SUBPAGE HERO
+   ============================================================ */
+.subpage-hero {
+  position: relative;
+  padding: 140px 0 60px;
+  background: var(--clr-primary);
+  overflow: hidden;
+}
+
+.subpage-hero--small {
+  padding: 120px 0 50px;
+}
+
+.subpage-hero__bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(11, 27, 43, 0.95) 0%,
+    rgba(11, 27, 43, 0.85) 50%,
+    rgba(75, 123, 42, 0.15) 100%
+  );
+  z-index: 0;
+}
+
+.subpage-hero__bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 20%, rgba(75, 123, 42, 0.1) 0%, transparent 60%);
+}
+
+.subpage-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+}
+
+.subpage-hero__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--clr-white);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.subpage-hero__text {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.8;
+  max-width: 620px;
+}
+
+/* ============================================================
+   LEGAL CONTENT (Impressum / Datenschutz)
+   ============================================================ */
+.legal-content {
+  padding: var(--section-py) 0;
+  background: var(--clr-white);
+}
+
+.legal-content__inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.legal-content__inner h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--clr-primary);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.legal-content__inner h2:first-child {
+  margin-top: 0;
+}
+
+.legal-content__inner h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal-content__inner p {
+  font-size: 0.95rem;
+  color: var(--clr-text-light);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.legal-content__inner a {
+  color: var(--clr-accent);
+  font-weight: 600;
+}
+
+.legal-content__inner a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   CTA SECTION (Subpages)
+   ============================================================ */
+.cta-section {
+  padding: var(--section-py) 0;
+  background: var(--clr-offwhite);
+  text-align: center;
+}
+
+.cta-section__content {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.cta-section__title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--clr-primary);
+  margin-bottom: 1rem;
+}
+
+.cta-section__text {
+  font-size: 1.05rem;
+  color: var(--clr-text-light);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 .footer {
