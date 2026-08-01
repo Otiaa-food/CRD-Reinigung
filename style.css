@@ -941,6 +941,34 @@ h1, h2, h3, h4, h5, h6 {
   gap: 10px;
 }
 
+/* Compact service cards (homepage teaser) */
+.services__grid--compact {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.service-card--compact {
+  padding: 28px 28px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.service-card--compact .service-card__icon {
+  margin-bottom: 0;
+}
+
+.service-card--compact .service-card__title {
+  margin-bottom: 0;
+  font-size: 1.05rem;
+}
+
+.service-card--compact .service-card__footer {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
 /* ============================================================
    JOBS SECTION (NEW)
    ============================================================ */

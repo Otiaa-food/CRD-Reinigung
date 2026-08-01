@@ -72,64 +72,111 @@
     </div>
   </section>
 
-  <!-- ========== JOBS CONTENT ========== -->
-  <section class="jobs" style="padding-top: 0;">
-    <div class="jobs__deco"></div>
+  <!-- ========== WARUM ZU UNS? ========== -->
+  <section class="about" id="warum-wir">
     <div class="container">
-      <div class="jobs__grid" style="margin-top: 3.5rem;">
-        <div class="reveal from-left">
-          <span class="section-label">Warum zu uns?</span>
-          <h2 class="section-title">Ein Arbeitsplatz mit <span class="text-accent">Wertschätzung</span></h2>
-          <p class="section-subtitle">Bei CRD erwarten Sie nicht nur faire Arbeitsbedingungen, sondern ein echtes Miteinander. Wir legen Wert auf ein kollegiales Umfeld, in dem sich jeder wohlfühlt und weiterentwickeln kann.</p>
-          <div style="margin-top: 2rem;">
-            <div class="jobs__list">
-              <div class="jobs__list-item">
-                <span class="jobs__list-icon">✓</span> Faire Vergütung & pünktliche Bezahlung
+      <div class="about__intro-grid">
+        <div class="about__content">
+          <span class="section-label reveal">Warum zu uns?</span>
+          <h2 class="section-title reveal reveal-delay-1">Ein Arbeitsplatz mit <span class="text-accent">Wertschätzung</span></h2>
+          <p class="about__text-highlight reveal reveal-delay-2">
+            Bei CRD erwarten Sie nicht nur faire Arbeitsbedingungen, sondern ein echtes Miteinander. Wir legen Wert auf ein kollegiales Umfeld, in dem sich jeder wohlfühlt und weiterentwickeln kann.
+          </p>
+          <div class="reveal reveal-delay-3" style="margin-top: 1.5rem;">
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: var(--clr-text-light);">
+                <span style="color: var(--clr-accent-light); font-weight: bold;">✓</span> Faire Vergütung & pünktliche Bezahlung
               </div>
-              <div class="jobs__list-item">
-                <span class="jobs__list-icon">✓</span> Flexible Arbeitszeiten (Vollzeit, Teilzeit oder Minijob)
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: var(--clr-text-light);">
+                <span style="color: var(--clr-accent-light); font-weight: bold;">✓</span> Flexible Arbeitszeiten (Vollzeit, Teilzeit oder Minijob)
               </div>
-              <div class="jobs__list-item">
-                <span class="jobs__list-icon">✓</span> Kollegiales und wertschätzendes Arbeitsklima
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: var(--clr-text-light);">
+                <span style="color: var(--clr-accent-light); font-weight: bold;">✓</span> Kollegiales und wertschätzendes Arbeitsklima
               </div>
-              <div class="jobs__list-item">
-                <span class="jobs__list-icon">✓</span> Langfristige und sichere Arbeitsplätze
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: var(--clr-text-light);">
+                <span style="color: var(--clr-accent-light); font-weight: bold;">✓</span> Langfristige und sichere Arbeitsplätze
               </div>
-              <div class="jobs__list-item">
-                <span class="jobs__list-icon">✓</span> Einarbeitung und Schulung durch erfahrene Kollegen
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: var(--clr-text-light);">
+                <span style="color: var(--clr-accent-light); font-weight: bold;">✓</span> Einarbeitung und Schulung durch erfahrene Kollegen
               </div>
             </div>
           </div>
         </div>
+        <div class="reveal from-right reveal-delay-2">
+          <div class="about__image">
+            <img src="assets/hero-bg.png" alt="Teamwork bei CRD" width="600" height="420">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="jobs__card reveal from-right">
-          <h3 class="jobs__card-title">Verstärkung gesucht (m/w/d)</h3>
-          <p class="jobs__card-text">Du suchst einen sicheren Arbeitsplatz mit fairen Arbeitsbedingungen und einem sympathischen Team? Dann bewirb dich bei CRD!</p>
-          
-          <div style="margin-bottom: 1.5rem;">
-            <h4 style="color: var(--clr-white); font-size: 1rem; margin-bottom: 0.75rem;">Dein Profil:</h4>
-            <div class="jobs__list">
-              <div class="jobs__list-item">
-                <span class="jobs__list-icon">✓</span> Zuverlässigkeit und Verantwortungsbewusstsein
-              </div>
-              <div class="jobs__list-item">
-                <span class="jobs__list-icon">✓</span> Selbstständige und sorgfältige Arbeitsweise
-              </div>
-              <div class="jobs__list-item">
-                <span class="jobs__list-icon">✓</span> Teamfähigkeit und Freude am Umgang mit Menschen
-              </div>
-              <div class="jobs__list-item">
-                <span class="jobs__list-icon">✓</span> Führerschein von Vorteil, aber nicht zwingend erforderlich
-              </div>
+  <!-- ========== STELLENANZEIGE ========== -->
+  <section class="services" id="stelle">
+    <div class="container">
+      <div class="services__header">
+        <span class="section-label reveal">Aktuelle Stelle</span>
+        <h2 class="section-title reveal reveal-delay-1">Verstärkung gesucht <span class="text-accent">(m/w/d)</span></h2>
+        <p class="section-subtitle reveal reveal-delay-2">Du suchst einen sicheren Arbeitsplatz mit fairen Arbeitsbedingungen und einem sympathischen Team? Dann bewirb dich bei CRD!</p>
+      </div>
+
+      <div class="services__grid" style="margin-top: 0;">
+        <div class="service-card reveal from-bottom reveal-delay-1">
+          <div class="service-card__icon" style="font-size: 2rem;">👤</div>
+          <h3 class="service-card__title">Dein Profil</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 1.25rem;">
+            <div style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--clr-text-light);">
+              <span style="color: var(--clr-accent-light); font-weight: bold;">✓</span> Zuverlässigkeit und Verantwortungsbewusstsein
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--clr-text-light);">
+              <span style="color: var(--clr-accent-light); font-weight: bold;">✓</span> Selbstständige und sorgfältige Arbeitsweise
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--clr-text-light);">
+              <span style="color: var(--clr-accent-light); font-weight: bold;">✓</span> Teamfähigkeit und Freude am Umgang mit Menschen
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--clr-text-light);">
+              <span style="color: var(--clr-accent-light); font-weight: bold;">✓</span> Führerschein von Vorteil, aber nicht zwingend erforderlich
             </div>
           </div>
+          <div class="service-card__footer">
+            <a href="mailto:info@crd-reinigung.de?subject=Bewerbung%20bei%20CRD%20Geb%C3%A4udeservice" class="service-card__link">Jetzt bewerben →</a>
+          </div>
+        </div>
 
-          <a href="mailto:info@crd-reinigung.de?subject=Bewerbung%20bei%20CRD%20Geb%C3%A4udeservice" class="btn btn-primary" id="jobsApplyBtn">
-            <span class="btn-icon-mail">
-              <svg class="icon-svg" style="color: #ffffff;" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            </span>
-            Jetzt einfach per E-Mail bewerben
-          </a>
+        <div class="service-card reveal from-bottom reveal-delay-2">
+          <div class="service-card__icon" style="font-size: 2rem;">💼</div>
+          <h3 class="service-card__title">Wir bieten</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 1.25rem;">
+            <div style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--clr-text-light);">
+              <span style="color: var(--clr-accent-light); font-weight: bold;">✓</span> Faire Vergütung & pünktliche Bezahlung
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--clr-text-light);">
+              <span style="color: var(--clr-accent-light); font-weight: bold;">✓</span> Flexible Arbeitszeiten (Vollzeit, Teilzeit oder Minijob)
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--clr-text-light);">
+              <span style="color: var(--clr-accent-light); font-weight: bold;">✓</span> Kollegiales und wertschätzendes Arbeitsklima
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--clr-text-light);">
+              <span style="color: var(--clr-accent-light); font-weight: bold;">✓</span> Langfristige und sichere Arbeitsplätze
+            </div>
+          </div>
+          <div class="service-card__footer">
+            <a href="mailto:info@crd-reinigung.de?subject=Bewerbung%20bei%20CRD%20Geb%C3%A4udeservice" class="service-card__link">Jetzt bewerben →</a>
+          </div>
+        </div>
+
+        <div class="service-card reveal from-bottom reveal-delay-3">
+          <div class="service-card__icon" style="font-size: 2rem;">📧</div>
+          <h3 class="service-card__title">So einfach geht's</h3>
+          <p class="service-card__text">Sende uns deine Bewerbung ganz einfach per E-Mail an <strong>info@crd-reinigung.de</strong> mit dem Betreff "Bewerbung bei CRD Gebäudeservice". Wir melden uns schnellstmöglich bei dir!</p>
+          <div class="service-card__footer">
+            <a href="mailto:info@crd-reinigung.de?subject=Bewerbung%20bei%20CRD%20Geb%C3%A4udeservice" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              <span class="btn-icon-mail">
+                <svg class="icon-svg" style="color: #ffffff;" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </span>
+              Jetzt per E-Mail bewerben
+            </a>
+          </div>
         </div>
       </div>
     </div>
