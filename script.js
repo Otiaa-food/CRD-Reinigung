@@ -198,13 +198,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = document.getElementById('formEmail').value.trim();
     const message = document.getElementById('formMessage').value.trim();
 
-    if (!name || !email || !message) {
+    const consent = document.getElementById('formConsent');
+    const isConsentChecked = consent ? consent.checked : true;
+
+    if (!name || !email || !message || !isConsentChecked) {
       // Highlight empty required fields
-      [
+      const fields = [
         { el: 'formName', val: name },
         { el: 'formEmail', val: email },
         { el: 'formMessage', val: message }
-      ].forEach(field => {
+      ];
+      if (consent && !isConsentChecked) {
+        consent.style.outline = '2px solid #e74c3c';
+        consent.style.outlineOffset = '2px';
+      }
+      fields.forEach(field => {
         const input = document.getElementById(field.el);
         if (!field.val) {
           input.style.borderColor = '#e74c3c';

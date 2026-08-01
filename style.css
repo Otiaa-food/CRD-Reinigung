@@ -1223,6 +1223,41 @@ select.form-control {
   padding-right: 40px;
 }
 
+/* Checkbox for consent */
+.form-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--clr-text-light);
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.form-checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--clr-accent);
+  cursor: pointer;
+}
+
+.form-checkbox-label a {
+  color: var(--clr-accent);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.form-checkbox-label a:hover {
+  color: var(--clr-accent-dark);
+}
+
+.form-checkbox-label span span {
+  color: var(--clr-accent);
+}
+
 .form-submit {
   margin-top: 8px;
 }
