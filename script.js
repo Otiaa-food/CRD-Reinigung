@@ -188,9 +188,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ============================================================
-     CONTACT FORM HANDLING
+     CONTACT FORM HANDLING (Formspree via fetch)
      ============================================================ */
-  contactForm.addEventListener('submit', function (e) {
+  contactForm.addEventListener('submit', async function (e) {
     e.preventDefault();
 
     // Basic validation
@@ -234,20 +234,35 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Simulate sending (show success)
-    contactForm.style.display = 'none';
-    formSuccess.classList.add('show');
+    // Disable submit button and show sending state
+    const submitBtn = document.getElementById('formSubmitBtn');
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Wird gesendet...';
 
-    // Build mailto as a fallback action
-    const phone = document.getElementById('formPhone').value.trim();
-    const service = document.getElementById('formService').value;
-    const subject = encodeURIComponent('Anfrage über Website – ' + (service || 'Allgemein'));
-    const body = encodeURIComponent(
-      `Name: ${name}\nE-Mail: ${email}\nTelefon: ${phone || 'Nicht angegeben'}\nGewünschte Leistung: ${service || 'Nicht ausgewählt'}\n\nNachricht:\n${message}`
-    );
+    try {
+      const formData = new FormData(contactForm);
 
-    // Open mailto
-    window.location.href = `mailto:info@crd-reinigung.de?subject=${subject}&body=${body}`;
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        // Show success message
+        contactForm.style.display = 'none';
+        formSuccess.classList.add('show');
+      } else {
+        const data = await response.json();
+        alert(data?.error || 'Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.');
+      }
+    } catch (error) {
+      alert('Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
+    }
   });
 
   /* ============================================================
